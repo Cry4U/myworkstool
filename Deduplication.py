@@ -41,7 +41,7 @@ def deduplicate_excel(file_path, sheet_name, columns):
 
 file_path = "e:/CODE/dataAnalysis/TEST/test.xlsx"
 sheet_name = "Sheet1"
-columns = ["ID1", "heroID2", "heroID3"]
+columns = ["ID1", "ID2", "ID3"]
 
 result_df = deduplicate_excel(file_path, sheet_name, columns)
 result_df.to_excel("e:/CODE/dataAnalysis/TEST/deduplicated_result.xlsx", index=False)
