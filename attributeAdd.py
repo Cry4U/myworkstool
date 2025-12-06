@@ -1,10 +1,3 @@
-"""
-单文件工具（PyQt5）——可自由配置要操作的属性/列名映射。
-新增功能：满红导出（在原 sheet 中插入新行作为满红条目）。
-修改字段：编辑下方 CONFIG 区的 ATTRS 与 ATTR_COL_MAP。
-依赖：pandas openpyxl PyQt5
-pip install pandas openpyxl PyQt5
-"""
 import os
 import sys
 import site
@@ -12,10 +5,6 @@ from typing import Optional, Union, Dict
 import pandas as pd
 
 def find_and_set_qt_plugins():
-    """
-    尝试定位包含 qwindows* 的 platforms 目录并把它设置到 QT_QPA_PLATFORM_PLUGIN_PATH。
-    必须在导入 PyQt5.QtWidgets 之前运行。
-    """
     candidates = []
     # PyQt5 模块自带位置
     try:
@@ -860,4 +849,5 @@ def main():
     sys.exit(app.exec_())
 
 if __name__ == "__main__":
+
     main()
